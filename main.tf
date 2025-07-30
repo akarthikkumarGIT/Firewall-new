@@ -1,21 +1,17 @@
-// More information on the Azure Terraform provider is available in the below link
-// https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
-
 terraform {
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
-      version = "4.4.0"
+      version = "4.37.0"
     }
   }
 }
 
 provider "azurerm" {
-  features {}
-
+features {}
+subscription_id = "11da9e6a-2de9-41d7-b691-16e4d50865a9"
 }
-
-resource "azurerm_resource_group" "appgrp" {
-  name     = "app-grps"
-  location = "North Europe"
+resource "azurerm_resource_group" "app-grp" {
+  name     = "vcs-app-grp"
+  location = "South Central US"
 }
